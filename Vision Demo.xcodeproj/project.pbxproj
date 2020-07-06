@@ -15,6 +15,7 @@
 		AE9D4DA824B3C15800366B6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9D4DA624B3C15800366B6E /* LaunchScreen.storyboard */; };
 		AE9D4DB324B3C15900366B6E /* Vision_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D4DB224B3C15900366B6E /* Vision_DemoTests.swift */; };
 		AE9D4DBE24B3C15900366B6E /* Vision_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D4DBD24B3C15900366B6E /* Vision_DemoUITests.swift */; };
+		AE9D4DCE24B3D32400366B6E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D4DCD24B3D32400366B6E /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		AE9D4DB924B3C15900366B6E /* Vision DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vision DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D4DBD24B3C15900366B6E /* Vision_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vision_DemoUITests.swift; sourceTree = "<group>"; };
 		AE9D4DBF24B3C15900366B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE9D4DCD24B3D32400366B6E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				AE9D4D9B24B3C15200366B6E /* AppDelegate.swift */,
 				AE9D4D9D24B3C15200366B6E /* SceneDelegate.swift */,
 				AE9D4D9F24B3C15200366B6E /* ContentView.swift */,
+				AE9D4DCD24B3D32400366B6E /* ImagePicker.swift */,
 				AE9D4DA124B3C15800366B6E /* Assets.xcassets */,
 				AE9D4DA624B3C15800366B6E /* LaunchScreen.storyboard */,
 				AE9D4DA924B3C15800366B6E /* Info.plist */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE9D4D9C24B3C15200366B6E /* AppDelegate.swift in Sources */,
+				AE9D4DCE24B3D32400366B6E /* ImagePicker.swift in Sources */,
 				AE9D4D9E24B3C15200366B6E /* SceneDelegate.swift in Sources */,
 				AE9D4DA024B3C15200366B6E /* ContentView.swift in Sources */,
 			);
