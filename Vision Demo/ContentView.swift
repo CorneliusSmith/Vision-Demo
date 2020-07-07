@@ -11,8 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var isShowingPicker = false
     @State private var selectedPhoto = UIImage()
-    
-    let imgClass = imageClassifier()
+    @ObservedObject var imgClass = imageClassifier(label: "hi")
     
     var body: some View {
         VStack{
@@ -21,6 +20,7 @@ struct ContentView: View {
             .frame(width: 300, height: 300)
             .scaledToFit()
             
+            Text(imgClass.label)
             Button(action:{
                 self.isShowingPicker = true
             }){
@@ -28,7 +28,7 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $isShowingPicker) {
-            ImagePicker(source: .photoLibrary, selectedImage: self.$selectedPhoto)
+            ImagePicker(source: .photoLibrary, selectedImage: self.$selectedPhoto, imgClass: self.imgClass)
         }
     }
 }

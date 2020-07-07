@@ -12,17 +12,19 @@ import CoreML
 import Vision
 import SwiftUI
 
-private var imgClassifier = imageClassifier()
 
 struct ImagePicker:UIViewControllerRepresentable{
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self)
-    }
     
     @Environment(\.presentationMode) private var presentationMode
     var source: UIImagePickerController.SourceType
     @Binding var selectedImage: UIImage
+    var imgClass = imageClassifier(label: "bye")
     
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+        
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
     
             let imagePicker = UIImagePickerController()
@@ -50,8 +52,8 @@ struct ImagePicker:UIViewControllerRepresentable{
             let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
             parent.selectedImage = image
             parent.presentationMode.wrappedValue.dismiss()
-            //queries model to classify food
-            imgClassifier.updateClassifications(for: image)
+            //queries model to classify food by using observed imageClassifier object passed to the parent imagePickerController
+            parent.imgClass.updateClassifications(for: image)
         }
     }
 }

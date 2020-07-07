@@ -10,8 +10,14 @@ import Foundation
 import UIKit
 import Vision
 import CoreML
+import SwiftUI
 
-class imageClassifier{
+class imageClassifier: ObservableObject{
+    @Published var label: String
+    init(label: String) {
+        self.label = label
+    }
+    
     lazy var classificationRequest: VNCoreMLRequest = {
            do {
                /*
@@ -31,9 +37,7 @@ class imageClassifier{
            }
        }()
        
-       /// - Tag: PerformRequests
        func updateClassifications(for image: UIImage){
-           
            let orientation = CGImagePropertyOrientation(image.imageOrientation)
            guard let ciImage = CIImage(image: image) else { print("Unable to create \(CIImage.self) from \(image).")
             return
@@ -54,28 +58,26 @@ class imageClassifier{
            }
        }
        
-       /// Updates the UI with the results of the classification.
-       /// - Tag: ProcessClassifications
        func processClassifications(for request: VNRequest, error: Error?) {
            DispatchQueue.main.async {
                guard let results = request.results else {
-//                   self.classificationLabel.text = "Unable to classify image.\n\(error!.localizedDescription)"
+                   print("No Classification Available")
                    return
                }
                // The `results` will always be `VNClassificationObservation`s, as specified by the Core ML model in this project.
                let classifications = results as! [VNClassificationObservation]
            
                if classifications.isEmpty {
-//                   self.classificationLabel.text = "Nothing recognized."
+                    print("No Classification Available")
                } else {
-                   // Display top classifications ranked by confidence in the UI.
-                   let topClassifications = classifications.prefix(2)
+                   //Gets the top classification
+                   let topClassifications = classifications.prefix(1)
                    let descriptions = topClassifications.map { classification in
                        // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
-                      return String(format: "  (%.2f) %@", classification.confidence, classification.identifier)
+                      return [classification.confidence, classification.identifier]
                    }
-//                   self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
-                print(descriptions)
+                self.label = descriptions[0][1] as? String ?? "nope"
+//                print (self.label, descriptions[0][1] as! String)
                }
            }
        }
