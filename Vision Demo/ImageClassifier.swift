@@ -14,8 +14,10 @@ import SwiftUI
 
 class imageClassifier: ObservableObject{
     @Published var label: String
+    var calories:CalorieView
     init(label: String) {
         self.label = label
+        self.calories = CalorieView(label: label)
     }
     
     lazy var classificationRequest: VNCoreMLRequest = {
@@ -42,7 +44,7 @@ class imageClassifier: ObservableObject{
            guard let ciImage = CIImage(image: image) else { print("Unable to create \(CIImage.self) from \(image).")
             return
         }
-           
+           self.label = "Classifying Image..."
            DispatchQueue.global(qos: .userInitiated).async {
                let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
                do {
@@ -76,7 +78,8 @@ class imageClassifier: ObservableObject{
                        // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
                       return [classification.confidence, classification.identifier]
                    }
-                self.label = descriptions[0][1] as? String ?? "nope"
+                self.label = descriptions[0][1] as? String ?? "Couldn't Classify Image"
+                self.calories.getCalories(label: self.label)
 //                print (self.label, descriptions[0][1] as! String)
                }
            }

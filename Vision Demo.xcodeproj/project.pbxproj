@@ -17,7 +17,7 @@
 		AE9D4DB324B3C15900366B6E /* Vision_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D4DB224B3C15900366B6E /* Vision_DemoTests.swift */; };
 		AE9D4DBE24B3C15900366B6E /* Vision_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D4DBD24B3C15900366B6E /* Vision_DemoUITests.swift */; };
 		AE9D4DCE24B3D32400366B6E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D4DCD24B3D32400366B6E /* ImagePicker.swift */; };
-		AEBD389E24B3FE1100CDF79D /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEBD389D24B3FE1100CDF79D /* MobileNet.mlmodel */; };
+		AEA3B8C424B4DD61000B3988 /* CalorieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3B8C324B4DD61000B3988 /* CalorieView.swift */; };
 		AEBD38A224B4046400CDF79D /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD38A124B4046400CDF79D /* ImageClassifier.swift */; };
 		AEC95A3F24B3EDC300BF394B /* SeeFood.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEC95A3E24B3EDC300BF394B /* SeeFood.mlmodel */; };
 /* End PBXBuildFile section */
@@ -56,7 +56,7 @@
 		AE9D4DBD24B3C15900366B6E /* Vision_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vision_DemoUITests.swift; sourceTree = "<group>"; };
 		AE9D4DBF24B3C15900366B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE9D4DCD24B3D32400366B6E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		AEBD389D24B3FE1100CDF79D /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MobileNet.mlmodel; path = "../../../../../Downloads/ClassifyingImagesWithVisionAndCoreML/Vision+ML Example/Model/MobileNet.mlmodel"; sourceTree = "<group>"; };
+		AEA3B8C324B4DD61000B3988 /* CalorieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieView.swift; sourceTree = "<group>"; };
 		AEBD38A124B4046400CDF79D /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
 		AEC95A3E24B3EDC300BF394B /* SeeFood.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SeeFood.mlmodel; path = ../../../../../Downloads/SeeFood.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,8 +114,8 @@
 				AE9D4D9F24B3C15200366B6E /* ContentView.swift */,
 				AE9D4DCD24B3D32400366B6E /* ImagePicker.swift */,
 				AEBD38A124B4046400CDF79D /* ImageClassifier.swift */,
+				AEA3B8C324B4DD61000B3988 /* CalorieView.swift */,
 				AE130D6524B444ED0006F685 /* CGImagePropertyOrientation.swift */,
-				AEBD389D24B3FE1100CDF79D /* MobileNet.mlmodel */,
 				AEC95A3E24B3EDC300BF394B /* SeeFood.mlmodel */,
 				AE9D4DA124B3C15800366B6E /* Assets.xcassets */,
 				AE9D4DA624B3C15800366B6E /* LaunchScreen.storyboard */,
@@ -286,9 +286,9 @@
 				AE130D6624B444ED0006F685 /* CGImagePropertyOrientation.swift in Sources */,
 				AEC95A3F24B3EDC300BF394B /* SeeFood.mlmodel in Sources */,
 				AE9D4D9C24B3C15200366B6E /* AppDelegate.swift in Sources */,
-				AEBD389E24B3FE1100CDF79D /* MobileNet.mlmodel in Sources */,
 				AE9D4DCE24B3D32400366B6E /* ImagePicker.swift in Sources */,
 				AE9D4D9E24B3C15200366B6E /* SceneDelegate.swift in Sources */,
+				AEA3B8C424B4DD61000B3988 /* CalorieView.swift in Sources */,
 				AE9D4DA024B3C15200366B6E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

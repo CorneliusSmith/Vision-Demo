@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var isShowingPicker = false
     @State private var selectedPhoto = UIImage()
-    @ObservedObject var imgClass = imageClassifier(label: "hi")
+    @ObservedObject var imgClass = imageClassifier(label: "")
     
     var body: some View {
         VStack{
@@ -20,7 +20,7 @@ struct ContentView: View {
             .frame(width: 300, height: 300)
             .scaledToFit()
             
-            Text(imgClass.label)
+            CalorieView(label: imgClass.label)
             Button(action:{
                 self.isShowingPicker = true
             }){
