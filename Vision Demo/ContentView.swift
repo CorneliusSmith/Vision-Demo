@@ -8,16 +8,18 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
     @State private var isShowingPicker = false
     @State private var selectedPhoto = UIImage()
+    
+    let imgClass = imageClassifier()
     
     var body: some View {
         VStack{
             Image(uiImage: self.selectedPhoto)
             .resizable()
             .frame(width: 300, height: 300)
+            .scaledToFit()
             
             Button(action:{
                 self.isShowingPicker = true

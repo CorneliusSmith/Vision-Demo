@@ -8,9 +8,11 @@
 
 import Foundation
 import UIKit
+import CoreML
+import Vision
 import SwiftUI
 
-
+private var imgClassifier = imageClassifier()
 
 struct ImagePicker:UIViewControllerRepresentable{
     func makeCoordinator() -> Coordinator {
@@ -45,13 +47,11 @@ struct ImagePicker:UIViewControllerRepresentable{
 
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 
-            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                parent.selectedImage = image
-            }
-
+            let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+            parent.selectedImage = image
             parent.presentationMode.wrappedValue.dismiss()
+            //queries model to classify food
+            imgClassifier.updateClassifications(for: image)
         }
     }
-    
-    
 }

@@ -16,6 +16,10 @@
 		AE9D4DB324B3C15900366B6E /* Vision_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D4DB224B3C15900366B6E /* Vision_DemoTests.swift */; };
 		AE9D4DBE24B3C15900366B6E /* Vision_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D4DBD24B3C15900366B6E /* Vision_DemoUITests.swift */; };
 		AE9D4DCE24B3D32400366B6E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D4DCD24B3D32400366B6E /* ImagePicker.swift */; };
+		AEBD389E24B3FE1100CDF79D /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEBD389D24B3FE1100CDF79D /* MobileNet.mlmodel */; };
+		AEBD38A024B3FE3000CDF79D /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD389F24B3FE3000CDF79D /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
+		AEBD38A224B4046400CDF79D /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD38A124B4046400CDF79D /* ImageClassifier.swift */; };
+		AEC95A3F24B3EDC300BF394B /* SeeFood.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEC95A3E24B3EDC300BF394B /* SeeFood.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		AE9D4DBD24B3C15900366B6E /* Vision_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vision_DemoUITests.swift; sourceTree = "<group>"; };
 		AE9D4DBF24B3C15900366B6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE9D4DCD24B3D32400366B6E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		AEBD389D24B3FE1100CDF79D /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MobileNet.mlmodel; path = "../../../../../Downloads/ClassifyingImagesWithVisionAndCoreML/Vision+ML Example/Model/MobileNet.mlmodel"; sourceTree = "<group>"; };
+		AEBD389F24B3FE3000CDF79D /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGImagePropertyOrientation+UIImageOrientation.swift"; path = "../../../../../Downloads/ClassifyingImagesWithVisionAndCoreML/Vision+ML Example/CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
+		AEBD38A124B4046400CDF79D /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
+		AEC95A3E24B3EDC300BF394B /* SeeFood.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SeeFood.mlmodel; path = ../../../../../Downloads/SeeFood.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,10 @@
 				AE9D4D9D24B3C15200366B6E /* SceneDelegate.swift */,
 				AE9D4D9F24B3C15200366B6E /* ContentView.swift */,
 				AE9D4DCD24B3D32400366B6E /* ImagePicker.swift */,
+				AEBD38A124B4046400CDF79D /* ImageClassifier.swift */,
+				AEBD389F24B3FE3000CDF79D /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+				AEBD389D24B3FE1100CDF79D /* MobileNet.mlmodel */,
+				AEC95A3E24B3EDC300BF394B /* SeeFood.mlmodel */,
 				AE9D4DA124B3C15800366B6E /* Assets.xcassets */,
 				AE9D4DA624B3C15800366B6E /* LaunchScreen.storyboard */,
 				AE9D4DA924B3C15800366B6E /* Info.plist */,
@@ -270,7 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBD38A224B4046400CDF79D /* ImageClassifier.swift in Sources */,
+				AEC95A3F24B3EDC300BF394B /* SeeFood.mlmodel in Sources */,
 				AE9D4D9C24B3C15200366B6E /* AppDelegate.swift in Sources */,
+				AEBD38A024B3FE3000CDF79D /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
+				AEBD389E24B3FE1100CDF79D /* MobileNet.mlmodel in Sources */,
 				AE9D4DCE24B3D32400366B6E /* ImagePicker.swift in Sources */,
 				AE9D4D9E24B3C15200366B6E /* SceneDelegate.swift in Sources */,
 				AE9D4DA024B3C15200366B6E /* ContentView.swift in Sources */,
