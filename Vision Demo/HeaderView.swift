@@ -35,7 +35,13 @@ struct HeaderView: View {
                                      width: 75,
                                      height: 75,
                                      imageWidth: 50,
-                                     imageHeight: 50)
+                                     imageHeight: 50
+            ){
+                                        
+                self.neumorphism.changeMode()
+                }.onAppear() {
+                    self.isDark = self.neumorphism.isDark
+                }
         }
     }
 }

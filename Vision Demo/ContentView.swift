@@ -23,10 +23,11 @@ struct ContentView: View {
                 neumorphism.color.edgesIgnoringSafeArea(.all)
                 VStack{
                     HeaderView(isDark: $isDark, label: imgClass.label)
-                    
-                    
+                    .padding(.top)
                     Spacer()
-                   
+                    ringView(nutritionInfo: imgClass.nutritionInfo)
+
+                    Spacer()
                     
             
                     
