@@ -9,9 +9,12 @@
 import SwiftUI
 import NeumorphismUI
 import SwiftUICharts
+import UIKit
 
 struct ContentView: View {
     @State private var isShowingPicker = false
+    @State private var isShowingActionSheet = false
+    @State private var source: UIImagePickerController.SourceType = .photoLibrary
     @State private var selectedPhoto = UIImage()
     @ObservedObject var imgClass = imageClassifier(label: "")
     @EnvironmentObject var neumorphism: NeumorphismManager
@@ -62,11 +65,21 @@ struct ContentView: View {
                         imageWidth: 50,
                         imageHeight: 50
                     ){
-                        self.isShowingPicker.toggle()
+                        self.isShowingActionSheet.toggle()
                     }.padding(.top)
                 }
+                .actionSheet(isPresented: self.$isShowingActionSheet){
+                    ActionSheet(title: Text("Choose One"),
+                                buttons: [.default(Text("Take Photo")){
+                                    self.source = .camera
+                                    self.isShowingPicker = true},
+                                          .default(Text("Pick From Library")){
+                                            self.source = .photoLibrary
+                                            self.isShowingPicker = true},
+                                          .cancel(Text("Cancel"))])
+                }
                 .sheet(isPresented: $isShowingPicker) {
-                    ImagePicker(source: .photoLibrary, selectedImage: self.$selectedPhoto, imgClass: self.imgClass)
+                    ImagePicker(source: self.source, selectedImage: self.$selectedPhoto, imgClass: self.imgClass)
                 }
             }
         }
