@@ -16,6 +16,7 @@ struct ContentView: View {
     @ObservedObject var imgClass = imageClassifier(label: "")
     @EnvironmentObject var neumorphism: NeumorphismManager
     @State private var isDark = false
+    
     var foodWidth = UIScreen.main.bounds.width * 0.70
     
     var body: some View {

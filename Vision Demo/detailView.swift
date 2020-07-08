@@ -12,6 +12,7 @@ import NeumorphismUI
 struct detailView: View {
     @EnvironmentObject var neumorphism: NeumorphismManager
     @ObservedObject var nutritionInfo: foodInfo
+
     var body: some View {
         
         VStack{
@@ -24,18 +25,21 @@ struct detailView: View {
                     .padding(.bottom)
                     .neumorphismShadow()
                 
-                        
-                VStack(alignment: .leading){
-                        Text("Sugar")
-                            .font(.title)
-                            .foregroundColor(self.neumorphism.fontColor())
+                if self.nutritionInfo.showText{
+                    VStack(alignment: .leading){
+                            Text("Sugar")
+                                .font(.title)
+                                .foregroundColor(self.neumorphism.fontColor())
+                                
+                            Text("Amount in \(nutritionInfo.foodName): \(nutritionInfo.sodium)")
+                                .foregroundColor(self.neumorphism.fontColor())
+                            Text("Recommended Daily Amount: 37.5g")
+                                .foregroundColor(self.neumorphism.fontColor())
                             
-                        Text("Amount in \(nutritionInfo.foodName): \(nutritionInfo.sugars)")
-                            .foregroundColor(self.neumorphism.fontColor())
-                        Text("Recommended Daily Amount: 37.5g")
-                            .foregroundColor(self.neumorphism.fontColor())
-                        
-                    }.padding(.bottom)
+                        }.padding(.bottom)
+                }
+                    
+                    
             }
             
             ZStack{
@@ -47,18 +51,19 @@ struct detailView: View {
                     .padding(.bottom)
                     .neumorphismShadow()
                 
-                        
-                VStack(alignment: .leading){
-                        Text("Protien")
-                            .font(.title)
-                            .foregroundColor(self.neumorphism.fontColor())
+                if self.nutritionInfo.showText{
+                    VStack(alignment: .leading){
+                            Text("Protien")
+                                .font(.title)
+                                .foregroundColor(self.neumorphism.fontColor())
+                                
+                            Text("Amount in \(nutritionInfo.foodName): \(nutritionInfo.protein)")
+                                .foregroundColor(self.neumorphism.fontColor())
+                            Text("Recommended Daily Amount: 56g")
+                                .foregroundColor(self.neumorphism.fontColor())
                             
-                        Text("Amount in \(nutritionInfo.foodName): \(nutritionInfo.protein)")
-                            .foregroundColor(self.neumorphism.fontColor())
-                        Text("Recommended Daily Amount: 56g")
-                            .foregroundColor(self.neumorphism.fontColor())
-                        
-                    }.padding(.bottom)
+                        }.padding(.bottom)
+                }
             }
             
             ZStack{
@@ -70,18 +75,19 @@ struct detailView: View {
                     .padding(.bottom)
                     .neumorphismShadow()
                 
-                        
-                VStack(alignment: .leading){
-                        Text("Sodium")
-                            .font(.title)
-                            .foregroundColor(self.neumorphism.fontColor())
+                if self.nutritionInfo.showText{
+                    VStack(alignment: .leading){
+                            Text("Sodium")
+                                .font(.title)
+                                .foregroundColor(self.neumorphism.fontColor())
+                                
+                        Text("Amount in \(nutritionInfo.foodName): \(nutritionInfo.sodium)")
+                                .foregroundColor(self.neumorphism.fontColor())
+                            Text("Recommended Daily Amount: 2300mg")
+                                .foregroundColor(self.neumorphism.fontColor())
                             
-                    Text("Amount in \(nutritionInfo.foodName): \(nutritionInfo.sodium)")
-                            .foregroundColor(self.neumorphism.fontColor())
-                        Text("Recommended Daily Amount: 2300mg")
-                            .foregroundColor(self.neumorphism.fontColor())
-                        
-                    }.padding(.bottom)
+                        }.padding(.bottom)
+                }
             }
         }
     }

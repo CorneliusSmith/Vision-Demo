@@ -14,6 +14,7 @@ import SwiftUI
 
 class imageClassifier: ObservableObject{
     @Published var label: String
+    @State var showText: Bool = false
     @ObservedObject var nutritionInfo = foodInfo(foodName: "", servingQty: "", servingUnit: "", calories: "", sugars: "", protein: "", totalFat: "", sodium: "", totalCarb: "")
     
     init(label: String) {

@@ -50,29 +50,31 @@ struct ringView: View {
                 .fill(neumorphism.color)
                 .neumorphismConcave(shapeType: .roundedRectangle(cornerRadius: 16), color: nil)
                 .frame(width: 200, height: 200)
-                VStack(alignment: .leading){
-                    Text("Per \(self.nutritionInfo.servingUnit.capitalized)")
-                        .foregroundColor(self.neumorphism.fontColor())
-                        .font(.system(size: 14,  weight: .semibold))
-                        .scaledToFit()
-                        .padding(.bottom)
+                if self.nutritionInfo.showText{
+                    VStack(alignment: .leading){
+                        Text("Per \(self.nutritionInfo.servingUnit.capitalized)")
+                            .foregroundColor(self.neumorphism.fontColor())
+                            .font(.system(size: 14,  weight: .semibold))
+                            .scaledToFit()
+                            .padding(.bottom)
+                            
                         
+                        Text("Total Calories: \(self.nutritionInfo.calories)/2000\n")
+                            .foregroundColor(self.neumorphism.fontColor())
+                            .font(.system(size: 14))
+                            .scaledToFit()
                     
-                    Text("Total Calories: \(self.nutritionInfo.calories)/2000\n")
-                        .foregroundColor(self.neumorphism.fontColor())
-                        .font(.system(size: 14))
-                        .scaledToFit()
-                
-                    Text("Total Fat: \(self.nutritionInfo.totalFat)/77g\n")
-                        .foregroundColor(self.neumorphism.fontColor())
-                        .scaledToFit()
-                        .font(.system(size: 14))
-                
-                
-                    Text("Total Carbs: \(self.nutritionInfo.totalCarb)/1300g\n")
-                        .foregroundColor(self.neumorphism.fontColor())
-                        .scaledToFit()
-                        .font(.system(size: 14))
+                        Text("Total Fat: \(self.nutritionInfo.totalFat)/77g\n")
+                            .foregroundColor(self.neumorphism.fontColor())
+                            .scaledToFit()
+                            .font(.system(size: 14))
+                    
+                    
+                        Text("Total Carbs: \(self.nutritionInfo.totalCarb)/1300g\n")
+                            .foregroundColor(self.neumorphism.fontColor())
+                            .scaledToFit()
+                            .font(.system(size: 14))
+                    }
                 }
             }
             
