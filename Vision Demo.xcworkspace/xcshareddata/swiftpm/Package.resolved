@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "Neumorphic",
-        "repositoryURL": "https://github.com/costachung/neumorphic/",
-        "state": {
-          "branch": null,
-          "revision": "1c6b98d65e3538ff0e16900c6719d9c58cd3cf47",
-          "version": "1.2.0"
-        }
-      },
-      {
         "package": "NeumorphismUI",
         "repositoryURL": "https://github.com/tsuzukihashi/NeumorphismUI",
         "state": {

@@ -8,11 +8,13 @@
 
 import SwiftUI
 import NeumorphismUI
+import SwiftUICharts
 
 struct HeaderView: View {
     @EnvironmentObject var neumorphism: NeumorphismManager
     @Binding var isDark : Bool
     var label: String
+    @Binding var chartStyle: ChartStyle
     var foodWidth = UIScreen.main.bounds.width * 0.70
     
     var body: some View {
@@ -39,8 +41,12 @@ struct HeaderView: View {
             ){
                                         
                 self.neumorphism.changeMode()
+                
+        
                 }.onAppear() {
                     self.isDark = self.neumorphism.isDark
+                    self.chartStyle = ChartStyle(backgroundColor: Color.clear, accentColor: Color.clear, gradientColor: GradientColor.init(start: Color.blue, end: Color.purple), textColor: self.neumorphism.fontColor(), legendTextColor: self.neumorphism.fontColor(), dropShadowColor: self.neumorphism.color)
+                    self.chartStyle.darkModeStyle = self.chartStyle
                 }
         }
     }

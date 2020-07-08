@@ -23,6 +23,9 @@ class foodInfo: ObservableObject {
     @Published var carbPercent = 0.0
     @Published var fatPercent = 0.0
     @Published var showText: Bool = false
+    @Published var sodiumGraph = 0.0
+    @Published var sugarGraph = 0.0
+    @Published var proteinGraph = 0.0
 
     
     init(foodName:String, servingQty: String, servingUnit: String, calories: String, sugars: String, protein: String, totalFat: String, sodium: String, totalCarb: String) {
@@ -102,6 +105,9 @@ class foodInfo: ObservableObject {
                         self.fatPercent = (Double((dictionary[0]["nf_total_fat"]! as? Double ?? 0.1)) / Double(77)) * 100
                         print(dictionary[0]["nf_calories"]! as? Double ?? 0.1 / Double(2000))
                         print("\n\n\n", self.calPercent, self.carbPercent, self.fatPercent, Double((dictionary[0]["nf_calories"]! as? Double ?? 0.1)) / Double(2000))
+                        self.sodiumGraph = dictionary[0]["nf_sodium"]! as? Double ?? 0.0
+                        self.sugarGraph = dictionary[0]["nf_sugars"]! as? Double ?? 0.0
+                        self.proteinGraph = dictionary[0]["nf_protein"]! as? Double ?? 0.0
                         self.showText = true
                     }
                     

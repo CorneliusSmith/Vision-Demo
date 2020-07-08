@@ -7,8 +7,8 @@
 //
 
 import SwiftUI
-import Neumorphic
 import NeumorphismUI
+import SwiftUICharts
 
 struct ContentView: View {
     @State private var isShowingPicker = false
@@ -16,6 +16,10 @@ struct ContentView: View {
     @ObservedObject var imgClass = imageClassifier(label: "")
     @EnvironmentObject var neumorphism: NeumorphismManager
     @State private var isDark = false
+//    @State var chartStyle : ChartStyle = ChartStyle(backgroundColor: Color.red, foregroundColor: ColorGradient.orangeBright)
+    @State var chartStyle : ChartStyle = Styles.barChartStyleOrangeDark
+
+    
     
     var foodWidth = UIScreen.main.bounds.width * 0.70
     
@@ -23,7 +27,7 @@ struct ContentView: View {
             ZStack{
                 neumorphism.color.edgesIgnoringSafeArea(.all)
                 VStack{
-                    HeaderView(isDark: $isDark, label: imgClass.label)
+                    HeaderView(isDark: $isDark, label: imgClass.label,chartStyle: self.$chartStyle)
                     .padding(.top)
                     Spacer()
                     ringView(nutritionInfo: imgClass.nutritionInfo)
@@ -37,7 +41,7 @@ struct ContentView: View {
 //                    .frame(width: 100, height: 100)
 //                    .scaledToFit()
                     
-                    detailView(nutritionInfo: imgClass.nutritionInfo)
+                    graphView(nutritionInfo: imgClass.nutritionInfo, chartStyle: self.$chartStyle)
                         
                         
                 
@@ -54,12 +58,12 @@ struct ContentView: View {
                         normalImage: Image(systemName: "camera"),
                         selectedImage: Image(systemName: "camera.fill"),
                         width: 350,
-                        height: 100,
+                        height: 80,
                         imageWidth: 50,
                         imageHeight: 50
                     ){
                         self.isShowingPicker.toggle()
-                    }
+                    }.padding(.top)
                 }
                 .sheet(isPresented: $isShowingPicker) {
                     ImagePicker(source: .photoLibrary, selectedImage: self.$selectedPhoto, imgClass: self.imgClass)
