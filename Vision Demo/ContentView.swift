@@ -31,11 +31,16 @@ struct ContentView: View {
                     
             
                     
-                    Image(uiImage: self.selectedPhoto)
-                    .resizable()
-                    .frame(width: 300, height: 300)
-                    .scaledToFit()
+//                    Image(uiImage: self.selectedPhoto)
+//                    .resizable()
+//                    .frame(width: 100, height: 100)
+//                    .scaledToFit()
+                    
+                    detailView(nutritionInfo: imgClass.nutritionInfo)
+                        
+                        
                 
+                    Spacer()
                     
 //                    CalorieView(label: imgClass.label, nutritionInfo: imgClass.nutritionInfo)
 //                    Button(action:{

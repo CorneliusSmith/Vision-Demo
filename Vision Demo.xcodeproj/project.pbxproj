@@ -11,7 +11,8 @@
 		AE4ACE5F24B539E80072FA47 /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = AE4ACE5E24B539E80072FA47 /* Neumorphic */; };
 		AE4ACE6224B53A6D0072FA47 /* NeumorphismUI in Frameworks */ = {isa = PBXBuildFile; productRef = AE4ACE6124B53A6D0072FA47 /* NeumorphismUI */; };
 		AE4ACE6424B54EAE0072FA47 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4ACE6324B54EAE0072FA47 /* HeaderView.swift */; };
-		AE4ACE6824B55AEE0072FA47 /* ringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4ACE6724B55AEE0072FA47 /* ringView.swift */; };
+		AE4ACE6E24B56DA50072FA47 /* ringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4ACE6D24B56DA50072FA47 /* ringView.swift */; };
+		AE4ACE7024B57BC80072FA47 /* detailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4ACE6F24B57BC80072FA47 /* detailView.swift */; };
 		AE780F7924B510140097B2DE /* foodInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE780F7824B510140097B2DE /* foodInfo.swift */; };
 		AE9D4D9C24B3C15200366B6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D4D9B24B3C15200366B6E /* AppDelegate.swift */; };
 		AE9D4D9E24B3C15200366B6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D4D9D24B3C15200366B6E /* SceneDelegate.swift */; };
@@ -48,7 +49,8 @@
 /* Begin PBXFileReference section */
 		AE130D6524B444ED0006F685 /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
 		AE4ACE6324B54EAE0072FA47 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		AE4ACE6724B55AEE0072FA47 /* ringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ringView.swift; path = "/Users/corneliussmith/Desktop/After Graduation/Curv/Vision Demo/Vision Demo/ringView.swift"; sourceTree = "<absolute>"; };
+		AE4ACE6D24B56DA50072FA47 /* ringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ringView.swift; path = "/Users/corneliussmith/Desktop/After Graduation/Curv/Vision Demo/Vision Demo/ringView.swift"; sourceTree = "<absolute>"; };
+		AE4ACE6F24B57BC80072FA47 /* detailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailView.swift; sourceTree = "<group>"; };
 		AE780F7824B510140097B2DE /* foodInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodInfo.swift; sourceTree = "<group>"; };
 		AE9D4D9824B3C15200366B6E /* Vision Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vision Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D4D9B24B3C15200366B6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,8 +134,9 @@
 				AE9D4D9B24B3C15200366B6E /* AppDelegate.swift */,
 				AE9D4D9D24B3C15200366B6E /* SceneDelegate.swift */,
 				AE9D4D9F24B3C15200366B6E /* ContentView.swift */,
+				AE4ACE6F24B57BC80072FA47 /* detailView.swift */,
 				AE4ACE6324B54EAE0072FA47 /* HeaderView.swift */,
-				AE4ACE6724B55AEE0072FA47 /* ringView.swift */,
+				AE4ACE6D24B56DA50072FA47 /* ringView.swift */,
 				AE9D4DCD24B3D32400366B6E /* ImagePicker.swift */,
 				AEBD38A124B4046400CDF79D /* ImageClassifier.swift */,
 				AEA3B8C324B4DD61000B3988 /* CalorieView.swift */,
@@ -314,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4ACE6E24B56DA50072FA47 /* ringView.swift in Sources */,
 				AEBD38A224B4046400CDF79D /* ImageClassifier.swift in Sources */,
 				AE130D6624B444ED0006F685 /* CGImagePropertyOrientation.swift in Sources */,
 				AEC95A3F24B3EDC300BF394B /* SeeFood.mlmodel in Sources */,
@@ -322,7 +326,7 @@
 				AE9D4D9E24B3C15200366B6E /* SceneDelegate.swift in Sources */,
 				AE780F7924B510140097B2DE /* foodInfo.swift in Sources */,
 				AE4ACE6424B54EAE0072FA47 /* HeaderView.swift in Sources */,
-				AE4ACE6824B55AEE0072FA47 /* ringView.swift in Sources */,
+				AE4ACE7024B57BC80072FA47 /* detailView.swift in Sources */,
 				AEA3B8C424B4DD61000B3988 /* CalorieView.swift in Sources */,
 				AE9D4DA024B3C15200366B6E /* ContentView.swift in Sources */,
 				AEF12C1A24B52D880079664E /* iosActivityRingView.swift in Sources */,

@@ -1,0 +1,16 @@
+PODS:
+  - ActivityRings (2.0.1)
+
+DEPENDENCIES:
+  - ActivityRings
+
+SPEC REPOS:
+  trunk:
+    - ActivityRings
+
+SPEC CHECKSUMS:
+  ActivityRings: f4cf172a0198c1994f4a5a1ff0bd88fd2d05b913
+
+PODFILE CHECKSUM: 178a81d714dceed25a85aa4561e40782a18f7c1e
+
+COCOAPODS: 1.8.4
