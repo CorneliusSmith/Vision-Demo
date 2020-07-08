@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AE130D6624B444ED0006F685 /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE130D6524B444ED0006F685 /* CGImagePropertyOrientation.swift */; };
+		AE4ACE5F24B539E80072FA47 /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = AE4ACE5E24B539E80072FA47 /* Neumorphic */; };
+		AE4ACE6224B53A6D0072FA47 /* NeumorphismUI in Frameworks */ = {isa = PBXBuildFile; productRef = AE4ACE6124B53A6D0072FA47 /* NeumorphismUI */; };
+		AE4ACE6424B54EAE0072FA47 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4ACE6324B54EAE0072FA47 /* HeaderView.swift */; };
+		AE780F7924B510140097B2DE /* foodInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE780F7824B510140097B2DE /* foodInfo.swift */; };
 		AE9D4D9C24B3C15200366B6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D4D9B24B3C15200366B6E /* AppDelegate.swift */; };
 		AE9D4D9E24B3C15200366B6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D4D9D24B3C15200366B6E /* SceneDelegate.swift */; };
 		AE9D4DA024B3C15200366B6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D4D9F24B3C15200366B6E /* ContentView.swift */; };
@@ -20,6 +24,7 @@
 		AEA3B8C424B4DD61000B3988 /* CalorieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3B8C324B4DD61000B3988 /* CalorieView.swift */; };
 		AEBD38A224B4046400CDF79D /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBD38A124B4046400CDF79D /* ImageClassifier.swift */; };
 		AEC95A3F24B3EDC300BF394B /* SeeFood.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEC95A3E24B3EDC300BF394B /* SeeFood.mlmodel */; };
+		AEF12C1A24B52D880079664E /* iosActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF12C1924B52D880079664E /* iosActivityRingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		AE130D6524B444ED0006F685 /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
+		AE4ACE6324B54EAE0072FA47 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		AE780F7824B510140097B2DE /* foodInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodInfo.swift; sourceTree = "<group>"; };
 		AE9D4D9824B3C15200366B6E /* Vision Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vision Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9D4D9B24B3C15200366B6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9D4D9D24B3C15200366B6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +66,7 @@
 		AEA3B8C324B4DD61000B3988 /* CalorieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieView.swift; sourceTree = "<group>"; };
 		AEBD38A124B4046400CDF79D /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
 		AEC95A3E24B3EDC300BF394B /* SeeFood.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SeeFood.mlmodel; path = ../../../../../Downloads/SeeFood.mlmodel; sourceTree = "<group>"; };
+		AEF12C1924B52D880079664E /* iosActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosActivityRingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4ACE6224B53A6D0072FA47 /* NeumorphismUI in Frameworks */,
+				AE4ACE5F24B539E80072FA47 /* Neumorphic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +96,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9374D02E8AC6F99B102C597 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AE9D4D8F24B3C15200366B6E = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +110,7 @@
 				AE9D4DB124B3C15900366B6E /* Vision DemoTests */,
 				AE9D4DBC24B3C15900366B6E /* Vision DemoUITests */,
 				AE9D4D9924B3C15200366B6E /* Products */,
+				A9374D02E8AC6F99B102C597 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,9 +130,12 @@
 				AE9D4D9B24B3C15200366B6E /* AppDelegate.swift */,
 				AE9D4D9D24B3C15200366B6E /* SceneDelegate.swift */,
 				AE9D4D9F24B3C15200366B6E /* ContentView.swift */,
+				AE4ACE6324B54EAE0072FA47 /* HeaderView.swift */,
 				AE9D4DCD24B3D32400366B6E /* ImagePicker.swift */,
 				AEBD38A124B4046400CDF79D /* ImageClassifier.swift */,
 				AEA3B8C324B4DD61000B3988 /* CalorieView.swift */,
+				AEF12C1924B52D880079664E /* iosActivityRingView.swift */,
+				AE780F7824B510140097B2DE /* foodInfo.swift */,
 				AE130D6524B444ED0006F685 /* CGImagePropertyOrientation.swift */,
 				AEC95A3E24B3EDC300BF394B /* SeeFood.mlmodel */,
 				AE9D4DA124B3C15800366B6E /* Assets.xcassets */,
@@ -167,6 +188,10 @@
 			dependencies = (
 			);
 			name = "Vision Demo";
+			packageProductDependencies = (
+				AE4ACE5E24B539E80072FA47 /* Neumorphic */,
+				AE4ACE6124B53A6D0072FA47 /* NeumorphismUI */,
+			);
 			productName = "Vision Demo";
 			productReference = AE9D4D9824B3C15200366B6E /* Vision Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -239,6 +264,10 @@
 				Base,
 			);
 			mainGroup = AE9D4D8F24B3C15200366B6E;
+			packageReferences = (
+				AE4ACE5D24B539E80072FA47 /* XCRemoteSwiftPackageReference "neumorphic" */,
+				AE4ACE6024B53A6D0072FA47 /* XCRemoteSwiftPackageReference "NeumorphismUI" */,
+			);
 			productRefGroup = AE9D4D9924B3C15200366B6E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -288,8 +317,11 @@
 				AE9D4D9C24B3C15200366B6E /* AppDelegate.swift in Sources */,
 				AE9D4DCE24B3D32400366B6E /* ImagePicker.swift in Sources */,
 				AE9D4D9E24B3C15200366B6E /* SceneDelegate.swift in Sources */,
+				AE780F7924B510140097B2DE /* foodInfo.swift in Sources */,
+				AE4ACE6424B54EAE0072FA47 /* HeaderView.swift in Sources */,
 				AEA3B8C424B4DD61000B3988 /* CalorieView.swift in Sources */,
 				AE9D4DA024B3C15200366B6E /* ContentView.swift in Sources */,
+				AEF12C1A24B52D880079664E /* iosActivityRingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +646,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AE4ACE5D24B539E80072FA47 /* XCRemoteSwiftPackageReference "neumorphic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/costachung/neumorphic/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		AE4ACE6024B53A6D0072FA47 /* XCRemoteSwiftPackageReference "NeumorphismUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tsuzukihashi/NeumorphismUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AE4ACE5E24B539E80072FA47 /* Neumorphic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE4ACE5D24B539E80072FA47 /* XCRemoteSwiftPackageReference "neumorphic" */;
+			productName = Neumorphic;
+		};
+		AE4ACE6124B53A6D0072FA47 /* NeumorphismUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE4ACE6024B53A6D0072FA47 /* XCRemoteSwiftPackageReference "NeumorphismUI" */;
+			productName = NeumorphismUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AE9D4D9024B3C15200366B6E /* Project object */;
 }

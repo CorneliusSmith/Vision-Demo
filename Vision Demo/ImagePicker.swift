@@ -18,7 +18,7 @@ struct ImagePicker:UIViewControllerRepresentable{
     @Environment(\.presentationMode) private var presentationMode
     var source: UIImagePickerController.SourceType
     @Binding var selectedImage: UIImage
-    var imgClass = imageClassifier(label: "bye")
+    @ObservedObject var imgClass:imageClassifier
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
