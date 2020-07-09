@@ -111,7 +111,6 @@ class foodInfo: ObservableObject {
                         self.showText = true
                     }
                     
-                    
                 }
 
             } catch{
