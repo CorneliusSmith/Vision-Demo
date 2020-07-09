@@ -51,7 +51,7 @@ class foodInfo: ObservableObject {
         request.setValue("a0955bb7", forHTTPHeaderField: "x-app-id")
         request.setValue("706d550fc919dc40a0e928f0b76de5b4", forHTTPHeaderField: "x-app-key")
         request.httpMethod = "POST"
-    //            request.setValue("0", forHTTPHeaderField: "x-remote-user-id")
+        request.setValue("0", forHTTPHeaderField: "x-remote-user-id")
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: parameters)
         } catch let error {

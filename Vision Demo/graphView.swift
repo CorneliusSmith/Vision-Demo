@@ -27,9 +27,11 @@ struct graphView: View {
                     if self.nutritionInfo.showText{
                         BarChartView(data: ChartData(values: [("Sodium/\(self.nutritionInfo.servingUnit.capitalized)",self.nutritionInfo.sodiumGraph/1000),
                             ("Sodium/Day",2.3),
+                            ("",-1.0),
                             ("Sugar/\(self.nutritionInfo.servingUnit.capitalized)",self.nutritionInfo.sugarGraph),
                             ("Sugar/Day",37.5),
-                            ("Protein/\(self.nutritionInfo.servingUnit.capitalized)",self.nutritionInfo.proteinGraph), ("Sugar/Day",37.5),
+                            ("",-1.0),
+                            ("Protein/\(self.nutritionInfo.servingUnit.capitalized)",self.nutritionInfo.proteinGraph),
                             ("Protein/Day",56)]),
                             title: "Actual Vs Recommended (grams)", style: self.chartStyle, form: CGSize(width: 350, height: 400)) // legend is optional
                 }

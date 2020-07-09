@@ -60,20 +60,23 @@ struct ringView: View {
                             
                         
                         Text("Total Calories: \(self.nutritionInfo.calories)/2000\n")
-                            .underline(color: Color.red)
+                            //.underline(color: Color.red)
+                            .foregroundColor(Color.red)
                             .foregroundColor(self.neumorphism.fontColor())
                             .font(.system(size: 14))
                             .scaledToFit()
                     
                         Text("Total Fat: \(self.nutritionInfo.totalFat)/77g\n")
-                            .underline(color: Color(hex: "538f53"))
+                            //.underline(color: Color(hex: "538f53"))
+                            .foregroundColor(Color(hex: "538f53"))
                             .foregroundColor(self.neumorphism.fontColor())
                             .scaledToFit()
                             .font(.system(size: 14))
                     
                     
                         Text("Total Carbs: \(self.nutritionInfo.totalCarb)/1300g\n")
-                            .underline(color: Color(hex: "d1c238"))
+                            //.underline(color: Color(hex: "d1c238"))
+                            .foregroundColor(Color(hex: "9c8c02"))
                             .foregroundColor(self.neumorphism.fontColor())
                             .scaledToFit()
                             .font(.system(size: 14))
